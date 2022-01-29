@@ -3,7 +3,10 @@
 #
 
 from tqdm import tqdm
-from common import Sentence, Instance
+# import sys
+# sys.path.append('../common')
+from common.sentence import Sentence
+from common.instance import Instance
 from typing import List
 import re
 
