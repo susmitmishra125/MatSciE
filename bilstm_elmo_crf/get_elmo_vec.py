@@ -66,21 +66,23 @@ def get_vector():
     cuda_device = 0 # >=0 for gpu, using GPU should be much faster.
     elmo = load_elmo(cuda_device)
     mode= "average"
-    dataset="fold5_mimicking_data"
+    # dataset="fold5_mimicking_data"
+    # dataset="all_lines"
+    dataset="annotated"
 
 
     # Read train
-    file = "data/"+dataset+"/train.txt"
+    file = "dataset/"+dataset+"/train.txt"
     outfile = file + ".elmo.vec"
     read_parse_write(elmo, file, outfile, mode)
 
     # Read dev
-    file = "data/"+dataset+"/dev.txt"
+    file = "dataset/"+dataset+"/dev.txt"
     outfile = file + ".elmo.vec"
     read_parse_write(elmo, file, outfile, mode)
 
     # Read test
-    file = "data/"+dataset+"/test.txt"
+    file = "dataset/"+dataset+"/test.txt"
     outfile = file + ".elmo.vec"
     read_parse_write(elmo, file, outfile, mode)
 
