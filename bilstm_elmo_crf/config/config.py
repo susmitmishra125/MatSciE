@@ -5,7 +5,7 @@
 import numpy as np
 from tqdm import tqdm
 from typing import List, Tuple, Dict, Union
-from common import Instance
+from common.instance import Instance
 import torch
 from enum import Enum
 import os

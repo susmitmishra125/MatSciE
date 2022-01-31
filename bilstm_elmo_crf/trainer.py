@@ -1,12 +1,14 @@
 import argparse
 import random
 import numpy as np
-from config import Reader, Config, ContextEmb, lr_decay, simple_batching, evaluate_batch_insts, get_optimizer, write_results, batching_list_instances
+from config.reader import Reader
+from config.config import Config
+from config import ContextEmb, lr_decay, simple_batching, evaluate_batch_insts, get_optimizer, write_results, batching_list_instances
 import time
 from model.neuralcrf import NNCRF
 import torch
 from typing import List
-from common import Instance
+from common.instance import Instance
 from termcolor import colored
 import os
 from config.utils import load_elmo_vec
