@@ -65,10 +65,10 @@ def get_vector():
 
     cuda_device = 0 # >=0 for gpu, using GPU should be much faster.
     elmo = load_elmo(cuda_device)
-    mode= "average"
+    mode= "average/fold2"
     # dataset="fold5_mimicking_data"
     # dataset="all_lines"
-    dataset="annotated"
+    dataset="annotated/fold2"
 
 
     # Read train
